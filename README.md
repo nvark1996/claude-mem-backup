@@ -35,7 +35,7 @@ The first snapshot runs immediately. Check it:
 
 ```bash
 tail ~/Library/Logs/claude-mem-backup.log
-# 2026-10-22 13:30:01  OK 2026-10-22 observations=2231 summaries=402 size=48M total=310M
+# example: 2026-01-15 13:30:01  OK 2026-01-15 observations=1000 summaries=100 size=20M total=140M
 ```
 
 **Enable the iCloud mirror (optional):** macOS privacy protection blocks background jobs from writing to Documents. To allow it, add `/bin/bash` in **System Settings → Privacy & Security → Full Disk Access**. Without this, the backup still works and the log just says the mirror was skipped. Granting Full Disk Access to bash is broad, so only do it if you want the off-machine copy.
@@ -59,7 +59,7 @@ tail ~/Library/Logs/claude-mem-backup.log
 1. Stop claude-mem's worker (or quit Claude Code).
 2. Copy the snapshot back:
    ```bash
-   cp ~/Library/Application\ Support/claude-mem-backups/2026-10-22/claude-mem.db ~/.claude-mem/claude-mem.db
+   cp ~/Library/Application\ Support/claude-mem-backups/2026-01-15/claude-mem.db ~/.claude-mem/claude-mem.db
    ```
 3. Also copy the `chroma` folder back to `~/.claude-mem/chroma` if that snapshot has one.
 4. Start Claude Code again.
